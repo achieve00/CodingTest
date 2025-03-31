@@ -1,3 +1,9 @@
+# 문제: 큰 수의 법칙
+# 유형: 그리디
+# 난이도: 하
+# 풀이 요약: 가장 큰 수를 K번 더하고, 두 번째로 큰 수를 1번 더하는 패턴을 반복
+# 시간복잡도: O(m) – while + for 루프 반복
+
 n, m, k = map(int, input().split())
 ary = list(map(int, input().split()))
 
