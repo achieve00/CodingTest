@@ -16,8 +16,6 @@ def solution(plans):
     # 시작 시간을 기준으로 정렬
     plans.sort(key=lambda x: x[1])
 
-    now = plans[0][1]
-
     for i in range(len(plans) - 1):
         current = plans[i]
         next_start = plans[i + 1][1]
@@ -29,7 +27,6 @@ def solution(plans):
         else:
             # 과제 완료
             answer.append(current[0])
-            now = current[1] + current[2]
             remain_time = remain - current[2]
 
             # 멈춰둔 과제 이어하기 (LIFO)
